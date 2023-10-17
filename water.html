@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Water Pollution</title>
+    <style>
+        body {
+            background-image: url('https://as1.ftcdn.net/v2/jpg/05/57/78/68/1000_F_557786857_0gPCWSrCGqrpWWkhEJhof4AEzNZawFkU.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fbfffb; /* Change the title color to orange */
+            text-align: center;
+            font-size: 50px; /* Increase the font size to 50 pixels */
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #78b7b9; /* Change button color to orange */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>WATER POLLUTION</h1>
+
+    <div class="content">
+        <p>Water pollution is the contamination of water bodies, such as rivers, lakes, oceans, and groundwater, with harmful substances. Common water pollutants include:</p>
+
+        <ul>
+            <li>Chemical pollutants</li>
+            <li>Biological pollutants</li>
+            <li>Suspended solids</li>
+            <li>Thermal pollution</li>
+            <li>Nutrient pollution</li>
+            <li>Heavy metals</li>
+        </ul>
+
+        <p>Water pollution can have detrimental effects on aquatic ecosystems, drinking water quality, and public health.</p>
+        <p>To Check Water Pollution in your Area, choose your Location</p>
+        <div class="input-container">
+            <form action="process_water_location.php" method="POST">
+                <label for="water-location">Select Your Location:</label>
+                <select id="water-location" name="water-location">
+                    <option value="location1">Narmada River</option>
+                    <option value="location2">Brahmaputra</option>
+                    <option value="location3">Godavari River</option>
+                    <option value="location4">Kaveri River</option>
+                    <!-- Add more location options as needed -->
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

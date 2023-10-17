@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Climate Change</title>
+    <style>
+        body {
+            background-image: url('https://climate.nasa.gov/system/content_pages/main_images/1321_cc-vs-gw-vs-wx-768px.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fbfffb; /* Change the title color to orange */
+            text-align: center;
+            font-size: 50px; /* Increase the font size to 50 pixels */
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #78b7b9; /* Change button color to orange */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>CLIMATE CHANGE</h1>
+
+    <div class="content">
+        <p>Climate change refers to long-term shifts in global temperatures and weather patterns. It is primarily driven by human activities, including the burning of fossil fuels and deforestation. Climate change can lead to a wide range of impacts, including:</p>
+
+        <ul>
+            <li>Rising global temperatures</li>
+            <li>Sea-level rise</li>
+            <li>More frequent and severe weather events</li>
+            <li>Disruption of ecosystems</li>
+            <li>Threats to biodiversity</li>
+            <li>Impact on agriculture and food security</li>
+        </ul>
+
+        <p>Addressing climate change is a critical global challenge that requires collective action and sustainable practices.</p>
+        <p>To Check Climate Change in your Area, choose your Location</p>
+        <div class="input-container">
+            <form action="process_climate_location.php" method="POST">
+                <label for="climate-location">Select Your Location:</label>
+                <select id="climate-location" name="climate-location">
+                    <option value="location1">New York City</option>
+                    <option value="location2">Los Angeles</option>
+                    <option value="location3">London</option>
+                    <option value="location4">Tokyo</option>
+                    <!-- Add more location options as needed -->
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deforestation</title>
+    <style>
+        body {
+            background-image: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/3A7B/production/_130217941_gettyimages-115999681.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fbfffb; 
+            text-align: center;
+            font-size: 50px; 
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #78b7b9; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>DEFORESTATION</h1>
+
+    <div class="content">
+        <p>Deforestation is the process of clearing or removing forests or trees, often for the purpose of agricultural expansion, urban development, or logging. The consequences of deforestation include:</p>
+
+        <ul>
+            <li>Loss of biodiversity</li>
+            <li>Disruption of ecosystems</li>
+            <li>Climate change due to reduced carbon sequestration</li>
+            <li>Soil erosion and degradation</li>
+            <li>Impact on indigenous communities</li>
+        </ul>
+
+        <p>Efforts to combat deforestation include reforestation, sustainable logging practices, and conservation initiatives.</p>
+        <p>To Check Deforestation choose Location given below</p>
+        <div class="input-container">
+            <form action="process_deforestation_location.php" method="POST">
+                <label for="deforestation-location">Select Your Location:</label>
+                <select id="deforestation-location" name="deforestation-location">
+                    <option value="location1">Amazon Rainforest</option>
+                    <option value="location2">Borneo</option>
+                    <option value="location3">Congo Basin</option>
+                    <option value="location4">Sumatra</option>
+                   
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

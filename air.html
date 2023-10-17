@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Air Pollution</title>
+    <style>
+      body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO1gHyJ4pghoO2QoojBE38urjNZPO8HnADl2Mp5I_aKsmx0oAX5YXlTXP4Z2qc4rabuSo&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+      }
+
+      h1 {
+        color: #fbfffb;
+        text-align: center;
+        font-size: 50px;
+        padding: 20px;
+      }
+
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      select,
+      input[type="date"],
+      input[type="number"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 70%;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #78b7b9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      label.required::after {
+        content: " *";
+        color: red;
+      }
+
+      .error-message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AIR POLLUTION</h1>
+
+    <div class="content">
+      <p>
+        Air pollution is the presence of substances in the atmosphere that can
+        be harmful to living organisms or the environment. These substances,
+        known as pollutants, can come from natural sources or human activities.
+        Common air pollutants include:
+      </p>
+
+      <ul>
+        <li>Particulate matter (PM2.5 and PM10)</li>
+        <li>Nitrogen oxides (NOx)</li>
+        <li>Sulfur dioxide (SO2)</li>
+        <li>Carbon monoxide (CO)</li>
+        <li>Volatile organic compounds (VOCs)</li>
+        <li>Ground-level ozone (O3)</li>
+      </ul>
+
+      <p>
+        Air pollution can have serious health effects on humans, including
+        respiratory problems, heart disease, and even premature death. It can
+        also harm the environment, leading to issues like acid rain, smog, and
+        damage to ecosystems.
+      </p>
+      <p>
+        To check pollution in your area, choose your Location, Year, and Date:
+      </p>
+      <div class="input-container">
+        <form action="/" method="POST" onsubmit="return validateForm()">
+          <label for="location" class="required">Select Your Location:</label>
+          <select id="location" name="location" required>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Aizawl">Aizawl</option>
+            <option value="Amaravati">Amaravati</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Brajrajnagar">Brajrajnagar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Ernakulam">Ernakulam</option>
+            <option value="Gurugram">Gurugram</option>
+          </select>
+
+          <!-- Add input fields for air quality parameters -->
+          <label for="pm25">Enter PM2.5 value:</label>
+          <input type="number" step="0.01" id="pm25" name="pm25" required />
+
+          <label for="pm10">Enter PM10 value:</label>
+          <input type="number" step="0.01" id="pm10" name="pm10" required />
+
+          <label for="no">Enter NO value:</label>
+          <input type="number" step="0.01" id="no" name="no" required />
+
+          <label for="no2">Enter NO2 value:</label>
+          <input type="number" step="0.01" id="no2" name="no2" required />
+
+          <label for="nox">Enter NOx value:</label>
+          <input type="number" step="0.01" id="nox" name="nox" required />
+
+          <label for="nh3">Enter NH3 value:</label>
+          <input type="number" step="0.01" id="nh3" name="nh3" required />
+
+          <label for="co">Enter CO value:</label>
+          <input type="number" step="0.01" id="co" name="co" required />
+
+          <label for="so2">Enter SO2 value:</label>
+          <input type="number" step="0.01" id="so2" name="so2" required />
+
+          <label for="o3">Enter O3 value:</label>
+          <input type="number" step="0.01" id="o3" name="o3" required />
+
+          <label for="benzene">Enter Benzene value:</label>
+          <input
+            type="number"
+            step="0.01"
+            id="benzene"
+            name="benzene"
+            required
+          />
+
+          <label for="toluene">Enter Toluene value:</label>
+          <input
+            type="number"
+            step="0.01"
+            id="toluene"
+            name="toluene"
+            required
+          />
+
+          <label for="xylene">Enter Xylene value:</label>
+          <input type="number" step="0.01" id="xylene" name="xylene" required />
+
+          <input type="submit" value="Submit" />
+          <p class="error-message" id="errorMessage"></p>
+
+          <!-- Add this line to display the AQI value -->
+          <p id="aqiResult">Predicted AQI: {{ aqi }}</p>
+          <p>Predicted Rating:{{ rating }}</p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Four Reactive Cards</title>
+    <style>
+      body {
+        background-image: url("https://img.freepik.com/premium-photo/nature-green-leaf-garden-summer-natural-green-leaves-plants-using-as-spring-background-cover-page-greenery-environment-ecology-wallpaper_103077-222.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+      }
+
+      h1 {
+        color: #044901;
+        text-align: center;
+        font-size: 50px;
+        padding: 10px;
+      }
+
+      .cards-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+        background-color: #d4ee8c;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+        margin: 10px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.342);
+      }
+
+      .card-image {
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ECO TECH</h1>
+
+    <div class="cards-container">
+      <div class="card">
+        <a href="air.html">
+          <img
+            src="https://t4.ftcdn.net/jpg/00/61/41/45/240_F_61414584_VJXk9PF6KiJ33EsL4E9XUKAtjiRicz2y.jpg"
+            alt="Image 1"
+            class="card-image"
+          />
+          <h2 class="card-content">AIR POLLUTION</h2>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="water.html">
+          <img
+            src="https://t3.ftcdn.net/jpg/05/57/78/68/360_F_557786857_0gPCWSrCGqrpWWkhEJhof4AEzNZawFkU.jpg"
+            alt="Image 2"
+            class="card-image"
+          />
+          <h2 class="card-content">WATER POLLUTION</h2>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="climate.html">
+          <img
+            src="https://t4.ftcdn.net/jpg/05/61/61/83/360_F_561618320_PpumfzBXQfDWVU4JzvpUyr8O7KrqGBaQ.jpg"
+            alt="Image 3"
+            class="card-image"
+          />
+          <h2 class="card-content">CLIMATE CHANGE</h2>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="deforestation.html">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Lacanja_burn.JPG"
+            alt="Image 4"
+            class="card-image"
+          />
+          <h2 class="card-content">DEFORESTATION</h2>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
